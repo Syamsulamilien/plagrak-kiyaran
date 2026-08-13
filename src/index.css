@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply font-body text-dusk-800 bg-white antialiased; }
+  h1, h2, h3, h4, h5, h6 { @apply font-display; }
+  ::selection { @apply bg-primary-600/20 text-primary-800; }
+  :focus-visible { outline: 2px solid #2E7D32; outline-offset: 3px; border-radius: 2px; }
+}
+
+@layer utilities {
+  .container-site { @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-10; }
+  .text-gradient-harvest {
+    background: linear-gradient(100deg, #06db06 0%, #5ad060 50%, #57A65B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  .badge-eyebrow { @apply inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-primary-700; }
+  .card-surface { @apply bg-white rounded-3xl shadow-soft border border-earth-100/60; }
+  .input-field { @apply w-full rounded-xl border border-earth-100 bg-mist px-4 py-2.5 text-sm outline-none focus:border-primary-400 focus:bg-white transition-colors; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
