@@ -98,7 +98,7 @@ export default function DataKependudukan() {
             )}
           </FadeIn>
 
-          <p className="text-center text-sm text-dusk-700/45 italic">*Semua angka di halaman ini bisa diperbarui lewat halaman admin.</p>
+          {/* <p className="text-center text-sm text-dusk-700/45 italic">*Semua angka di halaman ini bisa diperbarui lewat halaman admin.</p> */}
         </div>
       </section>
     </>

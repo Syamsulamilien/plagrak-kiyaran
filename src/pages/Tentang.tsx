@@ -82,7 +82,7 @@ export default function Tentang() {
                   </div>
                 ))}
               </div>
-              <p className="mt-6 text-center text-xs text-dusk-700/45 italic">*Batas wilayah bersifat contoh — sesuaikan dengan data administratif resmi pedukuhan.</p>
+              {/* <p className="mt-6 text-center text-xs text-dusk-700/45 italic">*Batas wilayah bersifat contoh — sesuaikan dengan data administratif resmi pedukuhan.</p> */}
             </div>
           </FadeIn>
         </div>
