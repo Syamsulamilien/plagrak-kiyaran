@@ -25,10 +25,10 @@ export default function Tentang() {
           </div>
           <div className="lg:col-span-7 space-y-4 text-dusk-700/80 leading-relaxed">
             <FadeIn>
-              <p>Pedukuhan Plagrak Kiyaran merupakan salah satu wilayah di Kalurahan Wukirsari, Kapanewon Cangkringan, yang sejak awal berkembang sebagai kawasan agraris di kaki Gunung Merapi. Nama &quot;Kiyaran&quot; telah lama melekat sebagai identitas pedukuhan bagian dari Wukirsari, wilayah yang terbentuk dari penggabungan beberapa kelurahan lama pada era pasca-kemerdekaan.</p>
-              <p>Letaknya di lereng bagian selatan Merapi menjadikan tanah di wilayah ini subur dan cocok untuk pertanian bertingkat (terasering) maupun perkebunan salak. Kehidupan warga sejak dulu tidak lepas dari siklus bertani, beternak, dan gotong royong menjaga lingkungan dari ancaman bencana lereng gunung berapi.</p>
-              <p>Hingga kini, semangat kekeluargaan dan gotong royong tersebut masih terus dijaga dan diwariskan antar generasi, menjadikan Plagrak Kiyaran sebagai dusun yang guyub sekaligus produktif secara pertanian.</p>
-              <p className="text-sm text-dusk-700/50 italic">*Narasi sejarah di atas adalah contoh awal — lengkapi dengan data dan cerita asli dari sesepuh serta perangkat pedukuhan.</p>
+            <p>Pedukuhan Plagrak Kiyaran merupakan salah satu wilayah di Kalurahan Wukirsari, Kapanewon Cangkringan, yang sejak awal berkembang sebagai kawasan agraris di kaki Gunung Merapi. Nama &quot;Kiyaran&quot; telah lama melekat sebagai identitas pedukuhan bagian dari Wukirsari, wilayah yang terbentuk dari penggabungan beberapa kelurahan lama pada era pasca-kemerdekaan.</p>
+            <p>Letaknya di lereng bagian selatan Merapi menjadikan tanah di wilayah ini subur dan mendukung kegiatan pertanian serta peternakan kambing. Kehidupan warga sejak dulu tidak lepas dari siklus bertani, beternak, dan gotong royong menjaga lingkungan dari ancaman bencana lereng gunung berapi.</p>
+            <p>Hingga kini, semangat kekeluargaan dan gotong royong tersebut masih terus dijaga dan diwariskan antar generasi, menjadikan Plagrak Kiyaran sebagai dusun yang guyub sekaligus produktif dalam bidang pertanian dan peternakan.</p>
+            <p className="text-sm text-dusk-700/50 italic">*Narasi sejarah di atas adalah contoh awal — lengkapi dengan data dan cerita asli dari sesepuh serta perangkat pedukuhan.</p>
             </FadeIn>
           </div>
         </div>
