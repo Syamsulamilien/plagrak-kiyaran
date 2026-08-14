@@ -30,6 +30,17 @@ export default function Tentang() {
             <p>Hingga kini, semangat kekeluargaan dan gotong royong tersebut masih terus dijaga dan diwariskan antar generasi, menjadikan Plagrak Kiyaran sebagai dusun yang guyub sekaligus produktif dalam bidang pertanian dan peternakan.</p>
             <p className="text-sm text-dusk-700/50 italic">*Narasi sejarah di atas adalah contoh awal — lengkapi dengan data dan cerita asli dari sesepuh serta perangkat pedukuhan.</p>
             </FadeIn>
+
+            <FadeIn delay={0.1}>
+              <div className="mt-6 aspect-video overflow-hidden rounded-3xl card-surface">
+                <img
+                  src="/images/foto1.png"
+                  alt="Dokumentasi sejarah Pedukuhan Plagrak Kiyaran"
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
