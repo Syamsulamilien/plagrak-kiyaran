@@ -55,11 +55,11 @@ export default function AdminDataKependudukan() {
   }
 
   async function addKerja() {
-    const { data } = await supabase.from("mata_pencaharian").insert({ name: "Pekerjaan Baru", value: 0 }).select().single();
+    const { data } = await supabase.from("mata_pencaharian").insert({ name: "Pekerjaan Baru", value: 0, keterangan: "" }).select().single();
     if (data) setKerja([...kerja, data]);
   }
   async function saveKerja(row: MataPencaharianItem) {
-    await supabase.from("mata_pencaharian").update({ name: row.name, value: row.value }).eq("id", row.id);
+    await supabase.from("mata_pencaharian").update({ name: row.name, value: row.value, keterangan: row.keterangan }).eq("id", row.id);
     flash(row.id);
   }
   async function deleteKerja(id: string) {
@@ -72,6 +72,7 @@ export default function AdminDataKependudukan() {
       <h1 className="font-display font-bold text-2xl text-dusk-800">Data Kependudukan & Statistik</h1>
       <p className="mt-1 text-sm text-dusk-700/60">Angka di sini otomatis dipakai di halaman Beranda dan Data Kependudukan.</p>
 
+      {/* Statistik Ringkas */}
       <section className="mt-8 card-surface p-6">
         <p className="font-display font-semibold text-dusk-800">Statistik Ringkas (kartu di Beranda)</p>
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -89,6 +90,7 @@ export default function AdminDataKependudukan() {
         </div>
       </section>
 
+      {/* Jenis Kelamin */}
       <section className="mt-6 card-surface p-6">
         <p className="font-display font-semibold text-dusk-800">Jenis Kelamin</p>
         <div className="mt-4 grid grid-cols-2 gap-4 max-w-sm">
@@ -104,6 +106,7 @@ export default function AdminDataKependudukan() {
         </div>
       </section>
 
+      {/* Kelompok Umur */}
       <section className="mt-6 card-surface p-6">
         <p className="font-display font-semibold text-dusk-800">Kelompok Umur</p>
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-5 gap-4">
@@ -119,23 +122,28 @@ export default function AdminDataKependudukan() {
         </div>
       </section>
 
+      {/* Mata Pencaharian */}
       <section className="mt-6 card-surface p-6">
         <div className="flex items-center justify-between">
           <p className="font-display font-semibold text-dusk-800">Mata Pencaharian</p>
           <Button size="sm" variant="secondary" onClick={addKerja}><Plus className="h-3.5 w-3.5" />Tambah Baris</Button>
         </div>
-        <div className="mt-4 space-y-2">
+        <div className="mt-4 space-y-3">
           {kerja.map((k) => (
-            <div key={k.id} className="flex gap-2 items-center">
-              <input value={k.name} onChange={(e) => setKerja(kerja.map((x) => x.id === k.id ? { ...x, name: e.target.value } : x))} className="input-field flex-1" />
-              <input type="number" value={k.value} onChange={(e) => setKerja(kerja.map((x) => x.id === k.id ? { ...x, value: Number(e.target.value) } : x))} className="input-field w-24" />
-              <button onClick={() => saveKerja(k)} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-700 hover:bg-primary-100 transition-colors">✓</button>
-              <button onClick={() => deleteKerja(k.id)} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-600 hover:bg-red-100 transition-colors"><Trash2 className="h-4 w-4" /></button>
+            <div key={k.id} className="rounded-xl border border-earth-100 p-3 space-y-2">
+              <div className="flex gap-2 items-center">
+                <input value={k.name} onChange={(e) => setKerja(kerja.map((x) => x.id === k.id ? { ...x, name: e.target.value } : x))} className="input-field flex-1" placeholder="Nama pekerjaan" />
+                <input type="number" value={k.value} onChange={(e) => setKerja(kerja.map((x) => x.id === k.id ? { ...x, value: Number(e.target.value) } : x))} className="input-field w-24" />
+                <button onClick={() => saveKerja(k)} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-700 hover:bg-primary-100 transition-colors">✓</button>
+                <button onClick={() => deleteKerja(k.id)} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-600 hover:bg-red-100 transition-colors"><Trash2 className="h-4 w-4" /></button>
+              </div>
+              <input value={k.keterangan ?? ""} onChange={(e) => setKerja(kerja.map((x) => x.id === k.id ? { ...x, keterangan: e.target.value } : x))} className="input-field text-sm" placeholder="Keterangan, mis. Bekerja sebagai pegawai di perusahaan/instansi swasta" />
             </div>
           ))}
         </div>
       </section>
 
+      {/* Kondisi Alam */}
       {alam && (
         <section className="mt-6 card-surface p-6">
           <p className="font-display font-semibold text-dusk-800">Kondisi Alam</p>

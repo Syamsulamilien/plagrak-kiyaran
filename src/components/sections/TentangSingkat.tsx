@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 
 const poin = [
   { icon: Mountain, text: "Berada di lereng selatan Gunung Merapi, Kalurahan Wukirsari" },
-  { icon: Sprout, text: "Ekonomi warga bertumpu pada pertanian, terutama sawah terasering dan kebun salak" },
+  { icon: Sprout, text: "Ekonomi warga bertumpu pada pertanian, terutama sawah " },
   { icon: Users, text: "Kehidupan bermasyarakat yang masih kental dengan gotong royong" },
 ];
 

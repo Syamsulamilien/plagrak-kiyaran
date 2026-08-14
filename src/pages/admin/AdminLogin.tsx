@@ -46,7 +46,7 @@ export default function AdminLogin() {
             {loading ? "Memproses..." : "Masuk"}
           </Button>
         </form>
-        <p className="mt-6 text-center text-xs text-dusk-700/45">Akun admin dibuat lewat dashboard Supabase, bukan lewat halaman ini.</p>
+        <p className="mt-6 text-center text-xs text-dusk-700/45">Khusus Akun Admin.</p>
       </div>
     </div>
   );

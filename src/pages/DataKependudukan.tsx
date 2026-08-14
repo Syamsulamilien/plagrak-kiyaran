@@ -9,6 +9,17 @@ import type { DemografiItem, KelompokUmurItem, MataPencaharianItem, StatistikRin
 
 const PALETTE = ["#2E7D32", "#8D6E63", "#C9962C", "#57A65B", "#A1887F", "#E3C578"];
 
+function PekerjaanTooltip({ active, payload }: any) {
+  if (!active || !payload?.length) return null;
+  const row = payload[0].payload as MataPencaharianItem;
+  return (
+    <div className="max-w-xs rounded-xl bg-white shadow-soft-lg border border-earth-100 px-4 py-3">
+      <p className="text-sm font-semibold text-dusk-800">{row.name} — {row.value.toLocaleString("id-ID")} orang</p>
+      {row.keterangan && <p className="mt-1 text-xs text-dusk-700/60 leading-relaxed">{row.keterangan}</p>}
+    </div>
+  );
+}
+
 export default function DataKependudukan() {
   const [ringkas, setRingkas] = useState<StatistikRingkas[] | null>(null);
   const [kelamin, setKelamin] = useState<DemografiItem[]>([]);
@@ -70,11 +81,21 @@ export default function DataKependudukan() {
                   <CartesianGrid strokeDasharray="3 3" stroke="#E4D8D3" horizontal={false} />
                   <XAxis type="number" tick={{ fontSize: 12, fill: "#5D4037" }} axisLine={false} tickLine={false} />
                   <YAxis type="category" dataKey="name" tick={{ fontSize: 12, fill: "#5D4037" }} width={140} axisLine={false} tickLine={false} />
-                  <Tooltip formatter={(v: any) => `${v.toLocaleString("id-ID")} orang`} cursor={{ fill: "#F4F6F8" }} />
+                  <Tooltip content={<PekerjaanTooltip />} cursor={{ fill: "#F4F6F8" }} />
                   <Bar dataKey="value" fill="#C9962C" radius={[0, 8, 8, 0]} maxBarSize={20} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
+            {kerja.some((k) => k.keterangan) && (
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                {kerja.filter((k) => k.keterangan).map((k) => (
+                  <div key={k.id} className="text-sm">
+                    <span className="font-medium text-dusk-800">{k.name}</span>
+                    <span className="text-dusk-700/60"> — {k.keterangan}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </FadeIn>
 
           <p className="text-center text-sm text-dusk-700/45 italic">*Semua angka di halaman ini bisa diperbarui lewat halaman admin.</p>

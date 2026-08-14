@@ -61,6 +61,7 @@ export interface MataPencaharianItem {
   id: string;
   name: string;
   value: number;
+  keterangan: string | null;
 }
 
 export interface KondisiAlam {

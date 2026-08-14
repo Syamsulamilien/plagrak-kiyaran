@@ -50,7 +50,7 @@ export default function Footer() {
             <p className="font-display font-semibold text-white text-sm mb-4">Kontak</p>
             <ul className="space-y-3 text-sm text-white/60">
               <li className="flex gap-2.5"><MapPin className="h-4 w-4 shrink-0 mt-0.5 text-primary-400" /><span>Pedukuhan Plagrak Kiyaran, Wukirsari, Cangkringan, Sleman, DIY</span></li>
-              <li className="flex gap-2.5"><Phone className="h-4 w-4 shrink-0 mt-0.5 text-primary-400" /><span>0812-xxxx-xxxx (Kantor Pedukuhan)</span></li>
+              <li className="flex gap-2.5"><Phone className="h-4 w-4 shrink-0 mt-0.5 text-primary-400" /><span>0812-xxxx-xxxx (Nomer Ketua RW)</span></li>
               <li className="flex gap-2.5"><Mail className="h-4 w-4 shrink-0 mt-0.5 text-primary-400" /><span>plagrakkiyaran@wukirsari.desa.id</span></li>
             </ul>
           </div>
