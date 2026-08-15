@@ -14,7 +14,7 @@ export default function TentangSingkat() {
     <section className="py-20 sm:py-28">
       <div className="container-site grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div className="lg:col-span-6">
-          <SectionHeading eyebrow="Selayang Pandang" title="Mengenal Plagrak Kiyaran" description="Dusun asri di kaki Gunung Merapi, tempat sawah berundak dan keramahan warga menyatu dalam keseharian yang sederhana namun produktif." />
+          <SectionHeading eyebrow="Selayang Pandang" title="Mengenal Plagrak" description="Dusun asri di kaki Gunung Merapi, tempat sawah berundak dan keramahan warga menyatu dalam keseharian yang sederhana namun produktif." />
           <FadeIn delay={0.1} className="mt-7 space-y-4">
             {poin.map((p) => (
               <div key={p.text} className="flex items-start gap-3.5">
@@ -30,7 +30,7 @@ export default function TentangSingkat() {
         <FadeIn delay={0.15} className="lg:col-span-6">
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden rounded-4xl card-surface">
-              <img src="images/plagrak006.jpeg" alt="Suasana Pedukuhan Plagrak Kiyaran" loading="lazy" className="h-full w-full object-cover" />
+              <img src="images/plagrak006.jpeg" alt="Suasana Pedukuhan Plagrak " loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden sm:block card-surface px-5 py-4 max-w-[220px]">
               <p className="text-2xl font-display font-bold text-primary-700">±500 mdpl</p>
