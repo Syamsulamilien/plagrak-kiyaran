@@ -35,7 +35,11 @@ export default function Tentang() {
                   </div>
                   <div className="lg:col-span-7 space-y-4 text-dusk-700/80 leading-relaxed">
                     <FadeIn>
-                      ...paragraf-paragraf tetap sama seperti sebelumnya...
+                      Pedukuhan Plagrak Kiyaran merupakan salah satu wilayah di Kalurahan Wukirsari, Kapanewon Cangkringan, yang sejak awal berkembang sebagai kawasan agraris di kaki Gunung Merapi. Nama "Kiyaran" telah lama melekat sebagai identitas pedukuhan bagian dari Wukirsari, wilayah yang terbentuk dari penggabungan beberapa kelurahan lama pada era pasca-kemerdekaan.
+
+Letaknya di lereng bagian selatan Merapi menjadikan tanah di wilayah ini subur dan mendukung kegiatan pertanian serta peternakan kambing. Kehidupan warga sejak dulu tidak lepas dari siklus bertani, beternak, dan gotong royong menjaga lingkungan dari ancaman bencana lereng gunung berapi.
+
+Hingga kini, semangat kekeluargaan dan gotong royong tersebut masih terus dijaga dan diwariskan antar generasi, menjadikan Plagrak Kiyaran sebagai dusun yang guyub sekaligus produktif dalam bidang pertanian dan peternakan.
                     </FadeIn>
                   </div>
         </div>
