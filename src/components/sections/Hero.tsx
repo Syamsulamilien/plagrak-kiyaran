@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-dusk">
       <img
         src="/images/homeplagrak.jpeg"
-        alt="Pemandangan Pedukuhan Plagrak Kiyaran"
+        alt="Pemandangan Pedukuhan Kiyaran Plagrak"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-dusk/80 via-dusk/10 to-transparent" />
@@ -20,7 +20,7 @@ export default function Hero() {
 
         <h1 className="mt-5 max-w-3xl">
           <AnimatedHeading text="Selamat Datang di Website Resmi" as="h1" className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white/90" delay={0.35} />
-          <AnimatedHeading text="Pedukuhan Plagrak Kiyaran" as="h1" className="mt-1 text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]" textClassName="text-gradient-harvest" delay={0.75} />
+          <AnimatedHeading text="Pedukuhan Kiyaran Plagrak" as="h1" className="mt-1 text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]" textClassName="text-gradient-harvest" delay={0.75} />
         </h1>
 
         <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.35, duration: 0.6 }} className="mt-6 max-w-xl text-base sm:text-lg text-white/75 leading-relaxed">
