@@ -30,7 +30,7 @@ export default function TentangSingkat() {
         <FadeIn delay={0.15} className="lg:col-span-6">
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden rounded-4xl card-surface">
-              <img src="https://picsum.photos/seed/tentang-singkat/900/700" alt="Suasana Pedukuhan Plagrak Kiyaran" loading="lazy" className="h-full w-full object-cover" />
+              <img src="images/plagrak006.jpeg" alt="Suasana Pedukuhan Plagrak Kiyaran" loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden sm:block card-surface px-5 py-4 max-w-[220px]">
               <p className="text-2xl font-display font-bold text-primary-700">±500 mdpl</p>
